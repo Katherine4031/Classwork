@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import gui.components.Visible;
 import gui.interfaces.Screen;
 
-
 public class BlankScreen extends Screen {
 
 	public BlankScreen(int width, int height) {
@@ -13,13 +12,6 @@ public class BlankScreen extends Screen {
 		super(width, height);
 	}
 
-	@Override
-	public void initObjects(ArrayList<Visible> viewObjects2) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void initObjects(ArrayList<Visible> viewObjects2) {
 		// TODO Auto-generated method stub
 		

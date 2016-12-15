@@ -1,5 +1,6 @@
 package gui.sampleGames;
 
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 	
 	private TextLabel label;
 	private TextArea paragraph;
+	private Button button;
 
 	public CoordinateScreen(int width, int height) {
 		super(width, height);
@@ -22,8 +24,14 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 		label = new TextLabel(40, 45, 760, 40, "");
 		paragraph = new TextArea(40, 85, 550, 500, "This is a whole paragraph. Notice how as the paragraph "
 								+ "gets to the edge of the page, a new line is created.");
+		button = new Button(40, 200, 80, 40, "Button", new Color(100, 100, 250), new Action(){
+			public void act(){
+				
+			}
+		});
 		viewObjects.add(label);
 		viewObjects.add(paragraph);
+		viewObjects.add(button);
 	}
 
 	@Override
