@@ -12,10 +12,10 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 	private TextLabel label;
 	private TextArea paragraph;
 	private Button button;
+	private Graphic picture;
 
 	public CoordinateScreen(int width, int height) {
 		super(width, height);
-		label = new TextLabel(40, 50, width - 80, 40, "");
 	}
 
 	@Override
@@ -30,7 +30,8 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 			}
 		});
 		
-		Graphic picture = new Graphic(50, 50, "sameImages/ba80d850bc89de31d0dc61a8f6bdb334.jpg");
+		picture = new Graphic(50, 50, 0.5, "resources/sampleImages/ba80d850bc89de31d0dc61a8f6bdb334.jpg");
+		viewObjects.add(picture);
 		viewObjects.add(label);
 		viewObjects.add(paragraph);
 		viewObjects.add(button);
@@ -42,7 +43,6 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 		
 	}
 
-	@Override
 	public void mouseMoved(MouseEvent m) {
 		label.setText("Mouse at " + m.getX() + ", " + m.getY());
 	}
