@@ -53,7 +53,7 @@ public class Button extends TextLabel implements Clickable, MouseListener{
 	}
 	
 	public boolean isHovered(int x, int y){
-		if(x > 0 && x < getX() + getWidth() && y > 0 && y < getY() + getHeight()){
+		if(x > getX() && x < getX() + getWidth() && y > getY() && y < getY() + getHeight()){
 			return true;
 		}
 		return false;
