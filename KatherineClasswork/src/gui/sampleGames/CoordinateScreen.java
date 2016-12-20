@@ -2,12 +2,13 @@ package gui.sampleGames;
 
 import java.awt.Color;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import gui.components.*;
 import gui.interfaces.*;
 
-public class CoordinateScreen extends Screen implements MouseMotionListener{
+public class CoordinateScreen extends Screen implements MouseMotionListener, MouseListener{
 	
 	private TextLabel label;
 	private TextArea paragraph;
@@ -26,7 +27,7 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 								+ "gets to the edge of the page, a new line is created.");
 		button = new Button(40, 200, 80, 40, "Button", new Color(100, 100, 250), new Action(){
 			public void act(){
-				
+				MouseFollower.game.setScreen(MouseFollower.myScreen);
 			}
 		});
 		
@@ -49,6 +50,41 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 	
 	public MouseMotionListener getMouseMotionListener(){
 		return this;
+	}
+	
+	public MouseListener getMouseListener(){
+		return this;
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent m) {
+		if(button.isHovered(m.getX(), m.getY())){
+			button.act();
+		}
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
