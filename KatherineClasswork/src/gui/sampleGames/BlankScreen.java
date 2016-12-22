@@ -3,7 +3,7 @@ package gui.sampleGames;
 import java.util.ArrayList;
 
 import gui.components.Visible;
-import gui.interfaces.Screen;
+import gui.practice.Screen;
 
 public class BlankScreen extends Screen {
 

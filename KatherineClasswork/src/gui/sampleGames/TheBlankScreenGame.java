@@ -1,7 +1,7 @@
 package gui.sampleGames;
 
 import gui.components.*;
-import gui.interfaces.*;
+import gui.practice.*;
 
 public class TheBlankScreenGame extends GUIApplication {
 

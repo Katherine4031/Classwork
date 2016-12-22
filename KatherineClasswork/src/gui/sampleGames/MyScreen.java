@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import gui.components.Action;
 import gui.components.Button;
 import gui.components.Visible;
-import gui.interfaces.Screen;
+import gui.practice.Screen;
 
 public class MyScreen extends Screen implements MouseMotionListener, MouseListener{
 

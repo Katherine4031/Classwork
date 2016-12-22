@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import gui.components.Action;
 import gui.components.ClickableGraphic;
 import gui.components.Visible;
-import gui.interfaces.Screen;
+import gui.practice.Screen;
 
 public class ClickableGraphicScreen extends Screen implements MouseListener{
 	

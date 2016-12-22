@@ -1,4 +1,4 @@
-package gui.interfaces;
+package gui.practice;
 
 import java.awt.Graphics;
 

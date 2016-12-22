@@ -1,6 +1,6 @@
 package gui.sampleGames;
 
-import gui.interfaces.GUIApplication;
+import gui.practice.GUIApplication;
 
 public class ClickGraphicGame extends GUIApplication {
 	

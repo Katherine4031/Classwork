@@ -5,8 +5,9 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
+
 import gui.components.*;
-import gui.interfaces.*;
+import gui.practice.*;
 
 public class CoordinateScreen extends Screen implements MouseMotionListener, MouseListener{
 	

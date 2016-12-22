@@ -1,4 +1,4 @@
-package gui.interfaces;
+package gui.practice;
 
 import java.awt.Color;
 //import java.awt.Font;
@@ -121,6 +121,10 @@ public abstract class Screen {
 
 	public MouseMotionListener getMouseMotionListener() {
 		return null;
+	}
+
+	public void addObject(Visible v) {
+		viewObjects.add(v);
 	}
 
 }
