@@ -19,7 +19,7 @@ public class ClickableGraphicScreen extends Screen implements MouseListener{
 	}
 
 	@Override
-	public void initObjects(ArrayList<Visible> viewObjects2) {
+	public void initObjects(ArrayList<Visible> viewObjects) {
 		cat = new ClickableGraphic(20, 20, 0.2, "resources/sampleImages/ba80d850bc89de31d0dc61a8f6bdb334.jpg");
 		cat.setAction(new Action(){
 
@@ -29,6 +29,8 @@ public class ClickableGraphicScreen extends Screen implements MouseListener{
 			}
 			
 		});
+		
+		viewObjects.add(cat);
 	}
 
 	@Override
