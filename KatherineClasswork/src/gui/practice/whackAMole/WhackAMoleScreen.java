@@ -53,7 +53,7 @@ public class WhackAMoleScreen extends ClickableScreen implements Runnable {
 	*the enemies aren't designed yet
 	*/
 	private MoleInterface getAMole() {
-		return new Mole((int)(getWidth() * Math.random() - 100), (int)(getHeight() * Math.random());
+		return new Mole((int)(getWidth() * Math.random() - 100), (int)(getHeight() * Math.random()));
 	}
 	
 	private void changeText(String s){
