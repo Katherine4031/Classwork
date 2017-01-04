@@ -37,6 +37,11 @@ public class CoordinateScreen extends Screen implements MouseMotionListener, Mou
 		viewObjects.add(label);
 		viewObjects.add(paragraph);
 		viewObjects.add(button);
+		
+		MovingComponent mc = new MovingComponent(30, 60, 80, 80);
+		mc.setVy(3);
+		mc.play();
+		viewObjects.add(mc);
 	}
 
 	@Override
