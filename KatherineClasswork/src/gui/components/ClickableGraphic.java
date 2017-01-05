@@ -31,9 +31,5 @@ public class ClickableGraphic extends Graphic implements Clickable {
 			action.act();
 		}
 	}
-	
-	public ClickableGraphic getMouseMotionListener(){
-		return null;
-	}
 
 }

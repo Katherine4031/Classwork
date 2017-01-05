@@ -91,7 +91,7 @@ public class WhackAMoleScreen extends ClickableScreen implements Runnable {
 	private void addNewMoles() {
 		//probability of mole appearing 
 		//depends on time left
-		double probability = 0.2 + 0.1*(30.0 - timeLeft);
+		double probability = 0.2 + 0.1*(30.0 - timeLeft)/30;
 		if(Math.random() < probability){
 			MoleInterface mole = getAMole();
 			//between 0.5 and 2.5 seconds
