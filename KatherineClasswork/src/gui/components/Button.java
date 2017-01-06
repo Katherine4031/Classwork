@@ -96,5 +96,15 @@ public class Button extends TextLabel implements Clickable, MouseListener{
 	public Button getMouseListener(){
 		return this;
 	}
+
+	public void highlight() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setAction(Action a) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
