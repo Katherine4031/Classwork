@@ -8,14 +8,14 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import gui.components.*;
+import gui.components.Visible;
 
 
 public abstract class Screen {
 
 	private int width;
 	private int height;
-	private ArrayList<Visible> viewObjects;
+	protected ArrayList<Visible> viewObjects;
 
 	protected BufferedImage image;
 
@@ -123,8 +123,8 @@ public abstract class Screen {
 	
 	public void moveToFront(Visible v){
 		if(viewObjects.contains(v)){
-			viewObjects .remove(v);
-			viewObjects.add(0, v); 
+			viewObjects.remove(v);
+			viewObjects.add(v); 
 			//moves all objects with index >= n
 			//forward by 1, increases size by 1
 			//adds object to index n
