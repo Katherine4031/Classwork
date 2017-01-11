@@ -1,10 +1,14 @@
 package gui.sampleGames;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
 
 import gui.components.*;
 import gui.practice.*;
@@ -38,10 +42,44 @@ public class CoordinateScreen extends Screen implements MouseMotionListener, Mou
 		viewObjects.add(paragraph);
 		viewObjects.add(button);
 		
-		MovingComponent mc = new MovingComponent(30, 60, 80, 80);
-		mc.setVy(3);
-		mc.play();
-		viewObjects.add(mc);
+//		MovingComponent mc = new MovingComponent(30, 60, 80, 80);
+//		mc.setVy(3);
+//		mc.play();
+//		viewObjects.add(mc);
+		
+		addAnimation(viewObjects);
+	}
+
+	private void addAnimation(ArrayList<Visible> viewObjects) {
+		AnimatedComponent a = new AnimatedComponent(40, 50, 150, 150);
+		try{
+			int numberInRow = 4;
+			int rows = 2;
+			int w = 240;
+			int h = 325;
+			
+			ImageIcon icon = new ImageIcon("resources/sampleImages/Doraemon.png");
+			
+			//create a for loop that will take a
+			//"sub-image" from the sprite grid
+			for(int i = 0; i < numberInRow * rows; i++){
+				//declare the "cropped image"
+				BufferedImage cropped = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+				
+				int leftMargin = 0;
+				int topMargin = 0;
+				int x1 = leftMargin + w * (i % numberInRow);
+				int y1 = topMargin + (i / numberInRow);
+				Graphics2D g = cropped.createGraphics();
+				g.drawImage(icon.getImage(), 100, 50, w, h, x1, y1, x1 + w, y1 + h, null);
+				a.addFrame(cropped, 100);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		viewObjects.add(a);
+		a.play();
 	}
 
 	@Override
